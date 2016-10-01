@@ -1,0 +1,23 @@
+<tool id="Kmeans1" name="Compute Kmeans" version="1.0.0">
+  <description>for each sequence in a file</description>
+  <command interpreter="/Users/mayankpahadia/anaconda/bin/python">Kmeans.py $input $output</command>
+  <inputs>
+      <param format="manipulatedData.csv" name="input_data" type="data" label="SourceFile"/>
+
+   </inputs>
+   <outputs>
+      <data format="text" name="output_data" />
+   </outputs>
+   
+   <tests>
+      <test>
+         <param name="input" value="manipulatedData.csv"/>
+         <output name="out_file1" file="Kmeans.txt"/>
+      </test>
+  </tests>
+  
+   <help>
+    This tool computes GC content from a FASTA file.
+   </help>
+  
+   </tool>

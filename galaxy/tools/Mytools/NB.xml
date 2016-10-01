@@ -1,0 +1,22 @@
+<tool id="NB_content_1" name="Compute NaivesBayes" version="0.1.0">
+  <description>for each sequence in a file</description>
+  <command interpreter="/Users/mayankpahadia/anaconda/bin/python">NB.py $input $output</command>
+  <inputs>
+      <param format="manipulatedData.csv" name="input" type="data" label="SourceFile"/>
+   </inputs>
+   <outputs>
+      <data format="tabular" name="output" />
+   </outputs>
+   
+   <tests>
+      <test>
+         <param name="input" value="manipulatedData.csv"/>
+         <output name="out_file1" file="NB.txt"/>
+      </test>
+  </tests>
+  
+   <help>
+    This tool computes GC content from a FASTA file.
+   </help>
+  
+   </tool>
