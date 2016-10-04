@@ -1,8 +1,8 @@
 <tool id="NB_content_1" name="Compute NaivesBayes" version="0.1.0">
   <description>for each sequence in a file</description>
-  <command interpreter="~/anaconda/bin/python">NB.py $input $output</command>
+  <command interpreter="~/anaconda/bin/python">NB.py $input</command>
   <inputs>
-      <param format="manipulatedData.csv" name="input" type="data" label="SourceFile"/>
+      <param format="csv" name="input" type="data" label="SourceFile"/>
    </inputs>
    <outputs>
       <data format="tabular" name="output" />

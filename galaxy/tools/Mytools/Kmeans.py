@@ -10,6 +10,7 @@ from collections import Counter
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2
 import random
+import sys
 
 def printCM(cm,k):
     for i in range(k):
@@ -66,7 +67,10 @@ Loading the Dataset HERE ---
 
 '''
 
-x= genfromtxt('manipulatedData.csv', delimiter=',')
+inputFile = sys.argv[1]
+print 'works till here'
+
+x= genfromtxt(inputFile, delimiter=',')
 # randomly take 40% as test data from training data
 random.shuffle(x)
 

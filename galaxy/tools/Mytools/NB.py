@@ -10,6 +10,7 @@ from collections import Counter
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2
 import random
+import sys
 
 def printCM(cm,k):
     for i in range(k):
@@ -67,8 +68,10 @@ def NaiveBayes(train_data, train_target,test_data,test_target,k):
 Loading the Dataset HERE ---
 
 '''
+inputFile = sys.argv[1]
+print 'works till here'
 
-x= genfromtxt('manipulatedData.csv', delimiter=',')
+x= genfromtxt(inputFile, delimiter=',')
 # randomly take 40% as test data from training data
 random.shuffle(x)
 

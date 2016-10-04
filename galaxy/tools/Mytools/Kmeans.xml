@@ -1,12 +1,12 @@
 <tool id="Kmeans1" name="Compute Kmeans" version="1.0.0">
   <description>for each sequence in a file</description>
-  <command interpreter="~/anaconda/bin/python">Kmeans.py $input $output</command>
+  <command interpreter="~/anaconda/bin/python">Kmeans.py $input</command>
   <inputs>
-      <param format="manipulatedData.csv" name="input_data" type="data" label="SourceFile"/>
+      <param format="csv" name="input" type="data" label="SourceFile"/>
 
    </inputs>
    <outputs>
-      <data format="text" name="output_data" />
+      <data format="tabular" name="output_data" />
    </outputs>
    
    <tests>
