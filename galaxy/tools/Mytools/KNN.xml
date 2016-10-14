@@ -1,0 +1,23 @@
+<tool id="KNN" name="Compute KNN" version="1.0.0">
+  <description>for each sequence in a file</description>
+  <command interpreter="~/anaconda/bin/python">KNN.py $input</command>
+  <inputs>
+      <param format="csv" name="input" type="data" label="SourceFile"/>
+
+   </inputs>
+   <outputs>
+      <data format="tabular" name="output_data" />
+   </outputs>
+   
+   <tests>
+      <test>
+         <param name="input" value="manipulatedData.csv"/>
+         <output name="out_file1" file="KNN.txt"/>
+      </test>
+  </tests>
+  
+   <help>
+    This tool computes GC content from a FASTA file.
+   </help>
+  
+   </tool>
